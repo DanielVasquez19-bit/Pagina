@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recetas de Pasta Italiana</title>
@@ -34,6 +35,7 @@
                 <img src="imagenes/carbonara.jpg" alt="Spaghetti alla Carbonara">
                 <h3>Spaghetti alla Carbonara</h3>
                 <p>Una receta clásica con huevo, queso y panceta.</p>
+                <button onclick="mostrarRecetaModal('carbonara')">Ver receta de Carbonara</button>
             </article>
             
             <!-- Receta 2 -->
@@ -41,6 +43,7 @@
                 <img src="imagenes/lasagna.jpg" alt="Lasagna al Horno">
                 <h3>Lasagna al Horno</h3>
                 <p>Capas de pasta, carne y queso gratinado al horno.</p>
+                <button onclick="mostrarRecetaModal('lasagna')">Ver receta de Lasagna</button>
             </article>
             
             <!-- Receta 3 -->
@@ -48,6 +51,7 @@
                 <img src="imagenes/pesto.jpg" alt="Pasta al Pesto">
                 <h3>Pasta al Pesto</h3>
                 <p>Fresca y deliciosa pasta con salsa de albahaca y piñones.</p>
+                <button onclick="mostrarRecetaModal('pesto')">Ver receta de Pesto</button>
             </article>
             
             <!-- Receta 4 -->
@@ -55,6 +59,7 @@
                 <img src="imagenes/marinara.jpg" alt="Pasta alla Marinara">
                 <h3>Pasta alla Marinara</h3>
                 <p>Pasta ligera con salsa de tomate, ajo y albahaca.</p>
+                <button onclick="mostrarRecetaModal('marinara')">Ver receta de Marinara</button>
             </article>
 
             <!-- Receta 5 -->
@@ -62,6 +67,7 @@
                 <img src="imagenes/bolognese.jpg" alt="Spaghetti alla Bolognese">
                 <h3>Spaghetti alla Bolognese</h3>
                 <p>Pasta con una salsa de carne y tomate, auténtica de Bolonia.</p>
+                <button onclick="mostrarRecetaModal('bolognese')">Ver receta de Bolognese</button>
             </article>
             
             <!-- Receta 6 -->
@@ -69,9 +75,20 @@
                 <img src="imagenes/alfredo.jpg" alt="Fettuccine Alfredo">
                 <h3>Fettuccine Alfredo</h3>
                 <p>Fettuccine con una salsa cremosa de mantequilla y queso parmesano.</p>
+                <button onclick="mostrarRecetaModal('alfredo')">Ver receta de Alfredo</button>
+    
             </article>
         </div>
     </section>
+   <!-- Modal -->
+<div id="modal-receta" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <div id="contenido-modal"></div>
+    </div>
+  </div>
+  
+
 
     <!-- Sección de consejos -->
     <section id="consejos">
@@ -90,5 +107,10 @@
             <button type="submit">Enviar</button>
         </form>
     </section>
+
+    <button onclick="subirAlInicio()" id="boton-subir">⬆️</button>
+    
+    
 </body>
+
 </html>
