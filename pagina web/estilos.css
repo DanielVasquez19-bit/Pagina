@@ -1,4 +1,4 @@
-/* Reseteo básico */
+
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +34,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #ff6347; /* Efecto hover */
+    color: #0c0504; 
 }
 
 #inicio {
@@ -42,7 +42,7 @@ header nav ul li a:hover {
     padding: 2rem;
     background-image: url('imagenes/fondo-pasta.jpg');
     background-size: cover;
-    color: #0f0f0f;
+    color: #8d5757;
 }
 
 h1, h2 {
@@ -95,7 +95,7 @@ button {
 button:hover {
     background-color: #555;
 }
-/* Botón para subir al inicio */
+/* boton para volver al inicio*/
 #boton-subir {
     position: fixed;
     bottom: 20px;
@@ -106,18 +106,18 @@ button:hover {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    display: none; /* Oculto inicialmente */
+    display: none; /* esto hace que no se vea hasta que no bajemos */
 }
 
 #boton-subir:hover {
     background-color: #555;
 }
 
-/* Transiciones suaves */
+/* transiciones fluidas*/
 html {
     scroll-behavior: smooth;
 }
-/* Estilo del Modal */
+/* estilo del Modal (el cuadrito de las recetas) */
 .modal {
     display: none;
     position: fixed;
