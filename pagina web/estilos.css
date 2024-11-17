@@ -207,6 +207,7 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/*esto es para que se reparta a  medidad las columnas*/
     gap: 32px;
     text-align: center;
+    flex-wrap: wrap;
 }
 /* estilo para las etiquetas de categoria */
 .categoria {
@@ -214,6 +215,15 @@ html {
     padding: 16px;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit; /* hereda el color del texto */
+}
+/*efecto de resaltar los cuadros de categoria*/
+.categoria:hover {
+    transform: scale(1.1); /* Escala el recuadro un poquito */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra más pronunciada */
+    background-color: #ffe4b5; /*cambia el color de fondo */
 }
 /* estilo de los iconos dentro de las categorias */
 .categorias-contenedorgrande .categoria i {
