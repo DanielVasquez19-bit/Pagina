@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vegetariano-Recetas Italianas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+         <!-- barra del menu de inicio -->
+    <header>
+        <nav>
+            <div class="logo"> <!-- logo que va a la derecha de la barra de menu -->
+                <img src="imagenes/Logo/logo 2.jpeg" alt="Logo de Recetas Gratis">
+                <span>Recetas Italianas</span>
+            </div>
+            <ul>
+                <li><a href="info.html">Inicio</a></li>
+                <li><a href="carnes.html">Carnes</a></li>
+                <li><a href="postres.html">postres</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="barra-busqueda"><!-- barra de busqueda que va al lado derecho de la barra de navegacion -->
+                <input type="text" placeholder="¿Qué estás buscando?">
+                <button>Buscar</button>
+            </div>
+        </nav>
+    </header>
+    </header>
+
+    <main>
+        <div class="recetas-grid">
+            <!-- Receta 1 -->
+            <article>
+                <img src="imagenes/carnes/ossobuco.jpg" alt="Ossobuco a la milanesa">
+                <h3>Ossobuco a la milanesa</h3>
+                <p>Un plato clásico italiano con sabores intensos.</p>
+                <button onclick="mostrarRecetaModal('Ossobuco a la milanesa')">Ver receta</button>
+            </article>
+            <!-- Receta 2 -->
+            <article>
+                <img src="imagenes/carnes/braciole.jpg" alt="Braciole">
+                <h3>Braciole</h3>
+                <p>Rollo de carne relleno de especias y queso.</p>
+                <button onclick="mostrarRecetaModal('Braciole')">Ver receta</button>
+            </article>
+        </div>
+    </main>
+ <!-- modal pa que se despliegue el cuadrito con la receta -->
+ <div id="modal-receta" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <div id="contenido-modal"></div>
+    </div>
+  </div>   
+    <!-- sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o quieres compartir tu receta? ¡Contáctanos!</p>
+        <form>
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu email" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <button onclick="subirAlInicio()" id="boton-subir">⬆️</button>
+
+    <footer>
+        <p>Recetas Italianas &copy; 2024</p>
+    </footer>
+</body>
+</html>
