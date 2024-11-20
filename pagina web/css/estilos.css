@@ -1,0 +1,302 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/*modificacion de la barra de menu para encajar el logo y la barra de busqueda*/
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+/*estilo para donde va el logo*/
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    
+}
+/*estilo para la imagen del logo*/
+.logo img {
+    height: 70px;
+    margin-right: 90px;
+}
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #0c0504; 
+}
+/*estilo para la barrita de busqueda esa de la lupa*/
+.barra-busqueda {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/*esto es para el cuadrito para escribir*/
+.barra-busqueda input {
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+/*para el boton de buscar*/
+.barra-busqueda button {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*para la lucesita al pasar el raton*/
+.barra-busqueda button:hover {
+    background-color: #e65c00;
+}
+#contenedor_receta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.carta_receta {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    width: 250px;
+    transition: all 0.3s;
+}
+
+.carta_receta.hidden {
+    display: none;
+}
+
+#inicio {
+    text-align: center;
+    padding: 2rem;
+    background-image: url('imagenes/fondo-pasta.jpg');
+    background-size: cover;
+    color: #8d5757;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+  }
+.recetas-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+  
+.recetas-grid article {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+}
+
+.recetas-grid img {
+    width: 100%;
+    border-radius: 5px;
+}
+.recetas-destacadas h2 {
+    text-align: center; 
+    font-size: 2rem; 
+    margin-bottom: 20px; 
+    color: #333; 
+  }
+
+#consejos, #contacto {
+    padding: 2rem;
+    text-align: center;
+}
+
+#consejos {
+  margin-top: 50px; /* Espacio encima de la sección de consejos */
+}
+#contacto {
+    margin-top: 50px; /* Espacio encima de la sección de consejos */
+  }
+
+form input, form textarea, form button {
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+/* boton para volver al inicio*/
+#boton-subir {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* esto hace que no se vea hasta que no bajemos */
+}
+
+#boton-subir:hover {
+    background-color: #555;
+}
+
+/* transiciones fluidas*/
+html {
+    scroll-behavior: smooth;
+}
+/* estilo del Modal (el cuadrito de las recetas) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /*  seccion Categorias */
+#categorias {
+    padding: 32px 16px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+/* cuadricula para los bloques de categorias */
+.categorias-contenedorgrande {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/*esto es para que se reparta a  medidad las columnas*/
+    gap: 32px;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+/* estilo para las etiquetas de categoria */
+.categoria {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit; /* hereda el color del texto */
+}
+/*efecto de resaltar los cuadros de categoria*/
+.categoria:hover {
+    transform: scale(1.1); /* Escala el recuadro un poquito */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra más pronunciada */
+    background-color: #ffe4b5; /*cambia el color de fondo */
+}
+/* estilo de los iconos dentro de las categorias */
+.categorias-contenedorgrande .categoria i {
+    font-size: 32px;
+    color: #ff6347;
+    margin-bottom: 8px;
+}
+/*estilo para el h3 de la categoria*/
+.categoria h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+/*estilo para las listas de las categorias*/
+.categoria ul {
+    list-style: none;
+}
+/*estilo para los items de las listas de categoria*/
+.categoria ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+/*esto es para darle como luz al pasar el clik en las listas de cagtegoria*/
+.categoria ul li a:hover {
+    color: #ff6600;
+}
+.banner {
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+  
+  .banner-imagen {
+    width: 100%; 
+    height: 600px; 
+    object-fit: cover;
+}

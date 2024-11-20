@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="java/scriptpostre.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postres - Recetas Italianas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/88375b7f6c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+         <!-- barra del menu de inicio -->
+    <header>
+        <nav>
+            <div class="logo"> <!-- logo que va a la derecha de la barra de menu -->
+                <img src="imagenes/Logo/logosi.jpg" alt="Logo de Recetas Gratis">
+                <span>Recetas de Postres</span>
+            </div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#recetas">Recetas</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#consejos">Consejos</a></li>
+                <li><a href="#contacto">Contacto</a></li> 
+            </ul>
+            <div class="barra-busqueda"><!-- barra de busqueda que va al lado derecho de la barra de navegacion -->
+                <input type="text" placeholder="¿Qué estás buscando?">
+                <button>Buscar</button>
+            </div>
+        </nav>
+    </header>
+    </header>
+
+    <section id="inicio">
+        <h1>Bienvenidos a Recetas de Los mas Dulces Postres</h1>
+        <p>Déjate llevar por el dulce placer de nuestros postres. Desde clásicos internacionales hasta opciones sencillas pero deliciosas, estas recetas son ideales para coronar cualquier comida o disfrutar en un momento especial. ¡Endulza tu día con un toque de creatividad y sabor!</p>
+    </section>
+    <div class="banner">
+        <img src="imagenes/postres/banner.jpg" alt="Banner de Bienvenida" class="banner-imagen">
+      </div>
+      <!-- apartado de recetas-->
+    <section id="recetas">
+        <section class="recetas-destacadas">
+          <h2>Recetas Destacadas</h2>
+        </section>
+        <div class="recetas-grid">
+   
+           
+             <!-- Receta 1 -->
+             <article>
+                <img src="imagenes/postres/tiramisu.jpg" alt="Tiramisu">
+                <h3>Tiramisu</h3>
+                <p>UUn postre italiano icónico con capas suaves y un toque de café.</p>
+                <button onclick="mostrarRecetaModal('tiramisu')">Ver receta</button>
+            </article>
+            <!-- Receta 2 -->
+            <article>
+                <img src="imagenes/postres/brownies.jpg" alt="Brownies">
+                <h3>Brownies</h3>
+                <p>Deliciosamente densos y llenos de sabor a cacao.</p>
+                <button onclick="mostrarRecetaModal('brownies')">Ver receta</button>
+            </article>
+            <!-- Receta 3 -->
+            <article>
+                <img src="imagenes/postres/cheesecake.jpg" alt="Cheesecake">
+                <h3>Cheesecake</h3>
+                <p>Cremoso y suave, con un toque de vainilla y una base crujiente.</p>
+                <button onclick="mostrarRecetaModal('cheesecake')">Ver receta</button>
+            </article>
+            <!-- Receta 4 -->
+            <article>
+                <img src="imagenes/postres/flan.jpg" alt="Flan">
+                <h3>Flan</h3>
+                <p>Suave y dulce, con una textura perfecta y un caramelo irresistible.</p>
+                <button onclick="mostrarRecetaModal('flan')">Ver receta</button>
+            </article>
+            <!-- Receta 5 -->
+            <article>
+                <img src="imagenes/postres/crepas.jpg" alt="Crepas">
+                <h3>Crepas</h3>
+                <p>Una mezcla irresistible de dulce y fruta fresca..</p>
+                <button onclick="mostrarRecetaModal('crepas')">Ver receta</button>
+            </article>
+            <!-- Receta 6 -->
+            <article>
+                <img src="imagenes/postres/gelatina.jpg" alt="Gelatina">
+                <h3>Gelatina</h3>
+                <p>Ligera, colorida y refrescante, ideal para cualquier ocasión.</p>
+                <button onclick="mostrarRecetaModal('gelatina')">Ver receta</button>
+            </article>
+        </div>
+    </main>
+
+    <section id="categorias">
+        <h2>Explora por categorias</h2>
+        <div class="categorias-contenedorgrande">
+                <a href="carnes.html" class="categoria">
+                    <i class="fas fa-drumstick-bite"></i><!-- llamando al icono de carne--> 
+                    <h3>Carnes</h3>
+                </a>
+                <a href="Info.html" class="categoria">
+                    <i class="fa-solid fa-wheat-awn"></i><!-- llamando al icono de carne-->  
+                    <h3>Pastas</h3>
+                </a>
+                <a href="vegetariano.html" class="categoria">
+                    <i class="fas fa-leaf"></i><!-- icono de hoja--> 
+                    <h3>vegetariano</h3>
+                </a>
+        </div>
+    </section>
+
+ <!-- modal pa que se despliegue el cuadrito con la receta -->
+ <div id="modal-receta" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <div id="contenido-modal"></div>
+    </div>
+  </div>  
+
+  <!-- sección de consejos para hacer pasta -->
+    <section id="consejos">
+        <h2>Consejos y Trucos</h2>
+        <p>Aprende como hacer los postres mas deliciosos de las maneras mas sencillas posibles. </p>
+        <p>   </p>
+        <p>   </p>
+        <p>   </p>
+        <h2>¿Como conseguir los mejores resultados en tus postres? </h2> 
+
+        <p>•Para hacer los mejores postres, usa siempre ingredientes frescos y de alta calidad como huevos, mantequilla, y frutas de temporada. </p>
+        <p>  Sigue las recetas con precisión, especialmente en medidas y tiempos de horneado. Precalienta el horno antes de usarlo y utiliza utensilios limpios y adecuados. </p>
+        <p>  Asegúrate de tamizar la harina para evitar grumos, bate bien los ingredientes para una textura uniforme, </p>
+        <p>  y permite que los postres se enfríen antes de servirlos o decorarlos. </p>
+        <p>  La paciencia y la atención al detalle son clave para obtener resultados deliciosos y consistentes.</p>
+
+        <h2>¿Como puedo conseguir los mejores ingredientes? </h2>
+
+        <p>Los postres requieren ingredientes frescos y de calidad como mantequilla sin sal,</p> 
+        <p>   huevos frescos, harina de alta calidad, y chocolate puro. Elige frutas maduras y de temporada, </p>
+        <p>   y azúcares refinados para mejores resultados. Usa extractos naturales como vainilla para un sabor auténtico.</p>
+        
+    </section>
+
+    <!-- sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o quieres compartir tu receta? ¡Contáctanos!</p>
+        <form onsubmit="return enviarFormulario()">
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu email" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <button onclick="subirAlInicio()" id="boton-subir">⬆️</button>
+
+    <footer>
+        <p>Recetas Oriente &copy; 2024</p>
+    </footer>
+</body>
+</html>

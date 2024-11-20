@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script src="script.js"></script>
+    <script src="java/scriptpasta.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recetas de Pasta Italiana</title>
-    <link rel="stylesheet" href="estilos.css".css>
+    <link rel="stylesheet" href="css/estilos.css".css>
+     <!-- este es el link de fontawesome para los iconos svg--> 
+     <script src="https://kit.fontawesome.com/88375b7f6c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- barra del menu de inicio -->
     <header>
         <nav>
+            <div class="logo"> <!-- logo que va a la derecha de la barra de menu -->
+                <img src="imagenes/Logo/logosi.jpg" alt="Logo de Recetas Gratis">
+                <span>Recetas Italianas</span>
+            </div>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#recetas">Recetas</a></li>
+                <li><a href="#categorias">Categorias</a></li>
                 <li><a href="#consejos">Consejos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+            <div class="barra-busqueda"><!-- barra de busqueda que va al lado derecho de la barra de navegacion -->
+                <input type="text" placeholder="¿Qué estás buscando?">
+                <button>Buscar</button>
+            </div>
         </nav>
     </header>
-
+   
     <!-- inicio de la pagina  -->
     <section id="inicio">
         <h1>Bienvenidos a Recetas de Pasta Italiana</h1>
         <p>Descubre las recetas de pasta más auténticas y deliciosas de la cocina italiana. Desde la clásica carbonara hasta lasagna al horno, aquí encontrarás el plato perfecto para cada ocasión.</p>
     </section>
+    <div class="banner">
+        <img src="imagenes/pasta/Pasta cruda.jpg" alt="Banner de Bienvenida" class="banner-imagen">
+      </div>
+
 
     <!-- apartado de recetas-->
     <section id="recetas">
-        <h2>Recetas Destacadas</h2>
+        <section class="recetas-destacadas">
+          <h2>Recetas Destacadas</h2>
+        </section>
         <div class="recetas-grid">
             <!-- receta 1 -->
             <article>
-                <img src="imagenes/carbonara.jpg" alt="Spaghetti alla Carbonara">
+                <img src="imagenes/pasta/carbonara.jpg" alt="Spaghetti alla Carbonara">
                 <h3>Spaghetti alla Carbonara</h3>
                 <p>Una receta clásica con huevo, queso y panceta.</p>
                 <button onclick="mostrarRecetaModal('carbonara')">Ver receta de Carbonara</button>
@@ -40,7 +57,7 @@
             
             <!-- receta 2 -->
             <article>
-                <img src="imagenes/lasagna.jpg" alt="Lasagna al Horno">
+                <img src="imagenes/pasta/lasagna.jpg" alt="Lasagna al Horno">
                 <h3>Lasagna al Horno</h3>
                 <p>Capas de pasta, carne y queso gratinado al horno.</p>
                 <button onclick="mostrarRecetaModal('lasagna')">Ver receta de Lasagna</button>
@@ -48,7 +65,7 @@
             
             <!-- receta 3 -->
             <article>
-                <img src="imagenes/pesto.jpg" alt="Pasta al Pesto">
+                <img src="imagenes/pasta/pesto.jpg" alt="Pasta al Pesto">
                 <h3>Pasta al Pesto</h3>
                 <p>Fresca y deliciosa pasta con salsa de albahaca y piñones.</p>
                 <button onclick="mostrarRecetaModal('pesto')">Ver receta de Pesto</button>
@@ -56,7 +73,7 @@
             
             <!-- receta 4 -->
             <article>
-                <img src="imagenes/marinara.jpg" alt="Pasta alla Marinara">
+                <img src="imagenes/pasta/marinara.jpg" alt="Pasta alla Marinara">
                 <h3>Pasta alla Marinara</h3>
                 <p>Pasta ligera con salsa de tomate, ajo y albahaca.</p>
                 <button onclick="mostrarRecetaModal('marinara')">Ver receta de Marinara</button>
@@ -64,7 +81,7 @@
 
             <!-- receta 5 -->
             <article>
-                <img src="imagenes/bolognese.jpg" alt="Spaghetti alla Bolognese">
+                <img src="imagenes/pasta/bolognese.jpg" alt="Spaghetti alla Bolognese">
                 <h3>Spaghetti alla Bolognese</h3>
                 <p>Pasta con una salsa de carne y tomate, auténtica de Bolonia.</p>
                 <button onclick="mostrarRecetaModal('bolognese')">Ver receta de Bolognese</button>
@@ -72,12 +89,30 @@
             
             <!-- receta 6 -->
             <article>
-                <img src="imagenes/alfredo.jpg" alt="Fettuccine Alfredo">
+                <img src="imagenes/pasta/alfredo.jpg" alt="Fettuccine Alfredo">
                 <h3>Fettuccine Alfredo</h3>
                 <p>Fettuccine con una salsa cremosa de mantequilla y queso parmesano.</p>
                 <button onclick="mostrarRecetaModal('alfredo')">Ver receta de Alfredo</button>
     
             </article>
+        </div>
+    </section>
+    <!-- nueva seccion para explorar por categorias -->
+    <section id="categorias">
+        <h2>Explora por categorias</h2>
+        <div class="categorias-contenedorgrande">
+                <a href="carnes.html" class="categoria">
+                    <i class="fas fa-drumstick-bite"></i><!-- llamando al icono de carne--> 
+                    <h3>Carnes</h3>
+                </a>
+                <a href="postres.html" class="categoria">
+                    <i class="fas fa-cookie-bite"></i><!-- llamando al icono de galletita--> 
+                    <h3>postres</h3>
+                </a>
+                <a href="vegetariano.html" class="categoria">
+                    <i class="fas fa-leaf"></i><!-- icono de hoja--> 
+                    <h3>vegetariano</h3>
+                </a>
         </div>
     </section>
    <!-- modal pa que se despliegue el cuadrito con la receta -->
@@ -94,20 +129,26 @@
     <section id="consejos">
         <h2>Consejos y Trucos</h2>
         <p>Aprende cómo cocinar la pasta al dente, elegir los mejores ingredientes y combinar las salsas con cada tipo de pasta. </p>
-        <p>   </p>
-        <p>   </p>
-        <p>   </p>
+   
         <h2>¿Como cocinar la pasta al dente? </h2> 
-        <p>•Llena una olla grande con agua (1 litro por cada 100 g de pasta). Esto asegura que la pasta tenga espacio para moverse y no se pegue.
-            Ponla a fuego alto hasta que hierva.</p>
-        <p>•Revisa el paquete de la pasta; normalmente, indica el tiempo de cocción recomendado para que quede al dente.
-            Si no hay indicaciones, cocina entre 8 y 12 minutos, dependiendo del tipo de pasta.</p>
-        <p>•Unos 2 minutos antes de que se cumpla el tiempo, saca un trozo de pasta y pruébalo. Al dente significa que debe estar firme al morder.</p>
+
+        <p>•Llena una olla grande con agua (1 litro por cada 100 g de pasta). Esto asegura que la pasta tenga espacio para moverse y no se pegue.</p>
+        <p> Ponla a fuego alto hasta que hierva.</p>
+            
+        <p>•Revisa el paquete de la pasta; normalmente, indica el tiempo de cocción recomendado para que quede al dente.</p>
+        <p> Si no hay indicaciones, cocina entre 8 y 12 minutos, dependiendo del tipo de pasta.</p>
+
+        <p>•Unos 2 minutos antes de que se cumpla el tiempo, saca un trozo de pasta y pruébalo. Al </p>
+        <p> dente significa que debe estar firme al morder.</p>
+
         <p>con un ligero núcleo resistente en el centro (pero no crudo).</p>
+
         <h2>¿Como puedo conseguir los mejores ingredientes? </h2>
-        <p>•</p>
-        <p>•</p>
-        <p>•</p>
+        <p>•Para hacer una pasta excepcional, elige pasta de calidad hecha con sémola de trigo duro, harina tipo 00 si es casera, y huevos frescos. </p>
+        <p>   Usa aceite de oliva extra virgen, queso parmesano auténtico, tomates maduros o enlatados San Marzano, y hierbas frescas como albahaca. </p>
+        <p>   Opta por vegetales de temporada y proteínas frescas, y cocina la pasta en agua con sal marina para realzar su sabor. </p>
+        <p>   La calidad de los ingredientes es clave para resaltar la simplicidad y autenticidad de la cocina italiana.</p>
+       
     </section>
 
     <!-- sección de contacto -->
@@ -124,7 +165,9 @@
 
     <button onclick="subirAlInicio()" id="boton-subir">⬆️</button>
     
-    
+    <footer>
+        <p>Recetas Oriente &copy; 2024</p>
+    </footer>   
 </body>
 
 </html>

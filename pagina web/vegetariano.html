@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="java/scriptvegetariana.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vegetariano-Recetas Italianas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/88375b7f6c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+         <!-- barra del menu de inicio -->
+    <header>
+        <nav>
+            <div class="logo"> <!-- logo que va a la derecha de la barra de menu -->
+                <img src="imagenes/Logo/logosi.jpg" alt="Logo de Recetas Gratis">
+                <span>Recetas Vegetarianas</span>
+            </div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#recetas">Recetas</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#consejos">Consejos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="barra-busqueda">
+                <input 
+                    type="text" 
+                    id="searchBar" 
+                    placeholder="¿Qué estás buscando?" 
+                    oninput="searchRecipes()" 
+                >
+                <button onclick="searchRecipes()">Buscar</button>
+            </div>
+            <div id="contenedor_recetar">
+                <div class="carta_receta">Pasta Alfredo</div>
+                <div class="carta_receta">Tiramisú</div>
+                <div class="carta_receta">Ravioles de carne</div>
+                <div class="carta_receta">Pizza Margarita</div>
+                <div class="carta_receta">Lasagna vegetariana</div>
+            </div>
+        </nav>
+    </header>
+    </header>
+
+    <section id="inicio">
+        <h1>Bienvenidos a Recetas de Comida Vegetariana</h1>
+        <p>Explora la riqueza de la cocina vegetariana con nuestras recetas llenas de sabor, color y frescura. Demuestra que comer saludable y delicioso es posible con platillos diseñados para todos los gustos, combinando ingredientes frescos y nutritivos.</p>
+    </section>
+    <div class="banner">
+        <img src="imagenes/vegetariana/banner.jpg" alt="Banner de Bienvenida" class="banner-imagen">
+      </div>
+<!-- apartado de recetas-->
+<section id="recetas">
+    <section class="recetas-destacadas">
+      <h2>Recetas Destacadas</h2>
+    </section>
+    <div class="recetas-grid">
+    
+            <!-- Receta 1 -->
+            <article>
+                <img src="imagenes/vegetariana/caprese.jpg" alt="Ensala Capresse">
+                <h3>Ensalada Capresse</h3>
+                <p>Un clásico italiano hecho con rodajas de tomate, mozzarella fresca, albahaca y un toque de aceite de oliva y vinagre balsámico. Simple, fresco y delicioso..</p>
+                <button onclick="mostrarRecetaModal('caprese')">Ver receta</button>
+            </article>
+            <!-- Receta 2 -->
+            <article>
+                <img src="imagenes/vegetariana/tacos.jpg" alt="Tacos Vegetarianos">
+                <h3>Tacos Vegetarianos</h3>
+                <p>Rortillas rellenas con una mezcla de vegetales salteados, frijoles negros, aguacate y una pizca de limón. Perfectos para una comida ligera pero llena de sabor.</p>
+                <button onclick="mostrarRecetaModal('tacos')">Ver receta</button>
+            </article>
+            <!-- Receta 3 -->
+            <article>
+                <img src="imagenes/vegetariana/berenjena.jpg" alt="Berenjena a la parmesana">
+                <h3>Berenjena a la Parmesana</h3>
+                <p>Capas de berenjena asada, salsa de tomate, queso parmesano y mozzarella horneadas hasta obtener una textura cremosa y un gratinado perfecto.</p>
+                <button onclick="mostrarRecetaModal('berenjenas')">Ver receta</button>
+            </article>
+            <!-- Receta 4 -->
+            <article>
+                <img src="imagenes/vegetariana/rissoto.jpg" alt="Risotto de champiñones">
+                <h3>Risotto de Champiñones</h3>
+                <p>Arroz cremoso cocido lentamente en caldo de verduras, mezclado con champiñones salteados y un toque de vino blanco y parmesano.</p>
+                <button onclick="mostrarRecetaModal('risotto')">Ver receta</button>
+            </article>
+            <!-- Receta 5 -->
+            <article>
+                <img src="imagenes/vegetariana/ham.jpg" alt="Hamburguesa Vegetariana">
+                <h3>Hamburguesa Vegetariana</h3>
+                <p>Jugosa hamburguesa hecha con una mezcla de legumbres, avena y especias, acompañada de vegetales frescos y un pan suave.</p>
+                <button onclick="mostrarRecetaModal('hamburguesas')">Ver receta</button>
+            </article>
+            <!-- Receta 6 -->
+            <article>
+                <img src="imagenes/vegetariana/prima.jpg" alt="Pasta Primavera">
+                <h3>Pasta Primavera</h3>
+                <p>Espaguetis acompañados de una colorida variedad de vegetales frescos salteados en aceite de oliva y ajo, terminados con un toque de parmesano.</p>
+                <button onclick="mostrarRecetaModal('primavera')">Ver receta</button>
+            </article>
+        </div>
+    </main>
+
+    <section id="categorias">
+        <h2>Explora por categorias</h2>
+        <div class="categorias-contenedorgrande">
+                <a href="carnes.html" class="categoria">
+                    <i class="fas fa-drumstick-bite"></i><!-- llamando al icono de carne--> 
+                    <h3>Carnes</h3>
+                </a>
+                <a href="postres.html" class="categoria">
+                    <i class="fas fa-cookie-bite"></i><!-- llamando al icono de galletita--> 
+                    <h3>Postres</h3>
+                </a>
+                <a href="Info.html" class="categoria">
+                    <i class="fa-solid fa-wheat-awn"></i><!-- llamando al icono de pasta -->
+                    <h3>Pastas</h3>
+                </a>
+        </div>
+    </section>
+
+ <!-- modal pa que se despliegue el cuadrito con la receta -->
+ <div id="modal-receta" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <div id="contenido-modal"></div>
+    </div>
+  </div>   
+  
+  <!-- sección de consejos para hacer pasta -->
+    <section id="consejos">
+        <h2>Consejos y Trucos</h2>
+        <p>Aprende cómo preparar las mejores comidas vegetarianas, las mas nutritivas y con los ingredientes mas frescos. </p>
+        <p>   </p>
+        <p>   </p>
+        <p>   </p>
+        <h2>¿Como hacer las mejores recetas? </h2> 
+        <p>Para lograr comidas vegetarianas deliciosas y equilibradas, es esencial incluir ingredientes que aporten todos los nutrientes necesarios.</p> 
+        <p>Prioriza las proteínas vegetales como lentejas, garbanzos, tofu, tempeh y quinoa, </p>
+        <p>combínalos con una variedad de verduras de diferentes colores para maximizar los beneficios nutricionales.</p>
+        <p>No olvides añadir grasas saludables como aguacate, frutos secos, semillas y aceites vegetales para dar sabor y textura a tus platos.</p>
+        <h2>Consejos </h2>
+        <p>•A la hora de cocinar, utiliza sustitutos de la carne como champiñones, berenjenas o seitán, y experimenta con quesos vegetales o caldos de verduras para lograr un sabor auténtico.</p>
+        <p>•Los métodos de cocción son otro factor importante. Asar o saltear verduras les da un sabor más intenso, mientras que las cocciones lentas son ideales para guisos y sopas llenos de sabor.</p>
+        <p>•Aprovecha las texturas para enriquecer tus platillos. Frutos secos, semillas tostadas o croutones agregan un toque crujiente, mientras que purés y cremas ofrecen suavidad y profundidad. </p>
+    </section>
+
+    <!-- sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o quieres compartir tu receta? ¡Contáctanos!</p>
+        <form onsubmit="return enviarFormulario()">
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu email" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <button onclick="subirAlInicio()" id="boton-subir">⬆️</button>
+
+    <footer>
+        <p>Recetas Oriente &copy; 2024</p>
+    </footer>
+</body>
+</html>
