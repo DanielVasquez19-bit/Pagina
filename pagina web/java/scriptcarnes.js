@@ -62,5 +62,42 @@ function mostrarRecetaModal(tipo) {
 function cerrarModal() {
     document.getElementById("modal-receta").style.display = "none";
 }
+// funcion para la barra de busqueda
+function buscarReceta() {
+    const query = document.getElementById("busqueda").value.toLowerCase().trim();
 
+    // si no hay texto, muestra alerta
+    if (!query) {
+        alert("Por favor ingresa el nombre de una receta.");
+        return;
+    }
+
+    // buscar recetas que coincidan con la busqueda
+    const resultados = Object.keys(recetas).filter((key) => {
+        return recetas[key].titulo.toLowerCase().includes(query);
+    });
+
+    // si hay resultados, mostrar en el modal o mostrar alerta si no se encuentran
+    if (resultados.length > 0) {
+        mostrarResultados(resultados);
+    } else {
+        alert("No se encontraron recetas con esa palabra.");
+    }
+}
+
+// mostrar los resultados de la busqueda en un modal
+function mostrarResultados(resultados) {
+    let contenidoHTML = "<h2>Resultados de busqueda:</h2>";
+    resultados.forEach((key) => {
+        contenidoHTML += `<p>${recetas[key].titulo}: ${recetas[key].contenido}</p>`;
+    });
+
+    document.getElementById("contenido-modal").innerHTML = contenidoHTML;
+    document.getElementById("modal-receta").style.display = "block";
+}
+
+// funcion para cerrar el modal
+function cerrarModal() {
+    document.getElementById("modal-receta").style.display = "none";
+}
 
